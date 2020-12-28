@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Form, Row, FormGrup, Div, Label, Input, Button} from 'reactstrap'
 import './App.css';
+import { Button } from 'bootstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class InputText extends React.Component{
+  constructor(props){
+    this.actualizarState= this.actualizarState.bind(this)
+    this.state= {
+      value: '',
+      error: false,
+      mensajeError: ''
+    }
+  }
+  actualizarState(e)
+
+  render(){
+    return(
+      <Div>
+        <Label htmlFor={'id-'+this.props.name}>{this.props.Label}</Label>
+      </Div>
+    )
+  }
+}
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.submit= this.submit.bind(this)
+  }
+
 }
 
 export default App;
