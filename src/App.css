@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+h1, p{
+  text-align: center;
+  color:dodgerblue;
+}
+.componente-input{
+  margin: auto;
+  width: 50%;
+}
+.componente-input-error{
+  color: red;
+  font: 16px;
+}
+div{
+  border-radius: 15px;
+  background-color: #f4b343;
+  margin: 100px auto;
+  width: 1000px;
+}
+label{
+  color:dodgerblue;
+}
+Button{
+  float: right;
+}

@@ -244,6 +244,7 @@ class App extends React.Component{
           {value:'3', texto:'karate'},
           {value:'4', texto:'Judo'},
           {value:'5', texto:'Lucha grecorromana'},
+          {value:'6', texto:'Kung fu'},
         ]}/>
 
         <Button color='primary' 
