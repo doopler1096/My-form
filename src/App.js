@@ -109,7 +109,7 @@ class InputCheckbox extends React.Component{
 
   render(){
     return(
-      <div className='componente-input'>
+      <div className='componente-inputCheck'>
         <Input
           id={'id-'+this.props.name}
           type='checkbox'
@@ -206,7 +206,7 @@ class App extends React.Component{
         actualizarState={this.actualizarState}/>
 
         <p>Indicanos con qué genero te identificas</p>
-
+        <div className='componente-inputCheck'>
         <InputCheckbox
         className='checkBox'
         label='Masculino'
@@ -224,7 +224,7 @@ class App extends React.Component{
         label='Otro'
         name='otro'
         actualizarState={this.actualizarState}/>
-
+        </div>
         <InputText
         label='Barrio de residencia'
         name='Barrio'
@@ -246,16 +246,17 @@ class App extends React.Component{
           {value:'5', texto:'Lucha grecorromana'},
           {value:'6', texto:'Kung fu'},
         ]}/>
-
+        <p>
         <Button color='primary' 
           disabled={this.state.nombre.error || 
             this.state.correo.error ||
             this.state.edad.error ||
             this.state.opciones.error}
           type='submit'
-          className={this.state.nombre.error || this.state.correo.error || this.state.edad.error ||this.state.opciones.error ? "button-desable": "button"}>
+          className={this.state.nombre.error || this.state.correo.error || this.state.edad.error ||this.state.opciones.error ?"button-desable": "Button"}>
           enviar
-        </Button>    
+        </Button>
+        </p>  
       </Form>
     )
   }
